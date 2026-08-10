@@ -120,8 +120,12 @@ nav a{
     font-weight: bolder;
  }
 
- .h-katalog p{
+ .katalog-dekstop-p{
     color: #68803d;
+ }
+
+ .katalog-mobile-p{
+    display: none;
  }
 
  #products {
@@ -421,7 +425,7 @@ nav a{
 
 
 .subscribe {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/header1.png');
+    background-image: linear-gradient(rgba(12, 53, 0, 0.4), rgba(1, 53, 8, 0.4)), url('img/footer-img.png');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -514,21 +518,37 @@ footer {
     color: white;
 }
 
+
 .social-icons {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    align-items: center;
 }
 
+
 .social-icons a {
-    background: rgba(255, 255, 255, 0.1);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 25px;          
+    height: 25px;         
+    background-color: #8fa08f; 
+    border-radius: 50%;   
+    transition: all 0.3s ease; 
 }
+
+
+.social-icons img {
+    width: 12px;        
+    height: 12px;
+    object-fit: contain;  }
+
+
+.social-icons a:hover {
+    transform: scale(1.1); 
+    background-color: #ffffff;
+}
+
 
 .copyright {
     text-align: center;
@@ -575,6 +595,7 @@ footer {
         text-align: center;
         padding: 0 15px;
         display: block;
+        color: #68803d;
    }
 
     .opening-btn{
@@ -618,19 +639,137 @@ footer {
 
  }
 
- .h-katalog{
-
- }
+ 
 
  .h-katalog h2{
    font-size: 30px;
  }
 
- .h-katalog p{
+ .katalog-dekstop-p{
+    display: none;
+ }
+
+ .katalog-mobile-p{
 margin-left: 10px;
 display: flex;
 text-align: center; 
 margin-right: 5px;
+color: #68803d;
+    }
+
+#products {
+    display: flex;
+    flex-direction: column;
+}
+
+.product1 {
+    max-width: 260px ;
+    width: 100%;
+    height: 100%;
+    max-height: 400px ;
+}
+
+.product2 {
+    max-width: 260px ;
+    width: 100%;
+    height: 100%;
+    max-height: 400px ;
+}
+
+.product2 {
+    max-width: 260px ;
+    width: 100%;
+    height: 100%;
+    max-height: 400px ;
+}
+
+#products img {
+    max-width: 230px;
+    max-height: 220px;
+    width: 100%;
+    height: 100%;
+}
+
+.add {
+    padding: 7px 0;
+    margin-bottom: 10px;
+}
+
+#products h5{
+    margin: 0;
+    font-size: 15px;
+}
+
+.price {
+    margin-left: 170px;
+}
+
+.capsule {
+    font-size: 14px;
+}
+
+.are-pic{
+    display: flex;
+    flex-direction: column;
+}
+
+.are-left h3{
+    font-size: 23px;
+}
+
+.are-left .are-btn {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+header {padding-bottom: 5px;}
+
+img .logo {
+}
+
+.are-right .are-btn {
+    padding: 3px 30px;
+}
+
+.why .why-cards {
+    flex-direction: column;
+}
+
+.subscribe .subscribe-box {
+    padding: 4px 4px;
+}
+
+.subscribe {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) url(img/footer-img.png);
+}
+
+.subscribe-box button {
+    margin-right: px;
+    font-size: 10px;
+}
+
+footer .footer-container {
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shop a {
+    font-size: 12px;
+}
+
+.view a {
+    font-size: 12px;
+}
+
+.opening .shop {
+    padding: 7px 27px;
+    border-radius: 10px;
+}
+
+.opening .view {
+    padding: 7px 15px;
+    border-radius: 10px;
 }
 
 }
