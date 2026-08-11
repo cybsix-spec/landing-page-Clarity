@@ -141,6 +141,9 @@ nav a{
     padding: 20px;
     background-color: white;
     border-radius: 15px;
+    box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
 }
 
 .product2 {
@@ -149,6 +152,9 @@ nav a{
     padding: 20px;
     background-color: white;
     border-radius: 15px;
+    box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
 }
 
 .product3 {
@@ -157,6 +163,9 @@ nav a{
     padding: 20px;
     background-color: white;
     border-radius: 15px;
+    box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 12px 2px rgba(0,0,0,0.75);
 }
 
 .img-product{
@@ -713,6 +722,7 @@ color: #68803d;
     width: 100%;
     height: 100%;
     max-height: 400px ;
+
 }
 
 .product2 {
@@ -720,9 +730,10 @@ color: #68803d;
     width: 100%;
     height: 100%;
     max-height: 400px ;
+
 }
 
-.product2 {
+.product3 {
     max-width: 260px ;
     width: 100%;
     height: 100%;
@@ -770,8 +781,6 @@ color: #68803d;
 
 header {padding-bottom: 5px;}
 
-img .logo {
-}
 
 .are-right .are-btn {
     padding: 3px 30px;
