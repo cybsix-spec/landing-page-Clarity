@@ -563,6 +563,52 @@ footer {
    display: none;
 }
 
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;          
+  height: 100vh;         
+  background-color: #ffffff;
+  padding: 40px 24px;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;  
+  transition: opacity 0.3s ease;
+}
+
+
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;  
+}
+
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  float: right;
+  color: #a3a3a3;
+}
+
+.mobile-nav-links {
+  clear: both;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-nav-links a {
+  text-decoration: none;
+  color: #415223;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
    .nav-links{
       display: none;
@@ -583,7 +629,7 @@ footer {
    }
 
    .opening h1{
-      font-size: 20px;
+      font-size: 25px;
    }
 
    .keterangan {
@@ -771,5 +817,10 @@ footer .footer-container {
     padding: 7px 15px;
     border-radius: 10px;
 }
+
+.hamburger-btn {
+    display: block; 
+    text-decoration: none;
+  }
 
 }
