@@ -37,6 +37,8 @@ display: flex;
   padding: 20px 40px;
   background-color: #ffffff;
   max-height: 700px;
+  position: sticky;
+    top: 0;
 }
 
 nav a{
@@ -205,16 +207,17 @@ nav a{
 
 
 
-.product1 {
+.product1, .product2, .product3 {
     border: 1px solid white;
     align-items: flex-start;
-    padding: 10px 22px;
+    padding: 20px 22px;
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 10px 32px 72px 0px #33333308;
     margin-top: 16px;
     max-width: 380px;
     max-height: 514.58px;
+    height: auto;
 }
     
 .img-product img {
@@ -225,31 +228,6 @@ nav a{
     margin-top: -21px;
 }
 
-
-.product2 {
-    border: 1px solid white;
-    align-items: flex-start;
-    padding: 10px 22px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 10px 32px 72px 0px #33333308;
-    margin-top: 16px;
-    max-width: 380px;
-    max-height: 514.58px;
-    
-}
-
-.product3 {
-    border: 1px solid white;
-    align-items: flex-start;
-    padding: 10px 22px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 10px 32px 72px 0px #33333308;
-    margin-top: 16px;
-    max-width: 380px;
-    max-height: 514.58px;
-}
 
 .img-product{
     background-color: #f2f2f2;
@@ -282,6 +260,7 @@ letter-spacing: 0%;
 
 .konten-product {
     display: flex;
+    justify-content: space-between;
 }
 
 .konten-product-right {
@@ -1001,6 +980,7 @@ max-width: 179.72px;
 
 .konten-product {
     display: flex;
+    
 }
 
 .konten-product-right {
@@ -1010,7 +990,6 @@ max-width: 179.72px;
 }
 
 .price {
-    margin-left: 35%;
     font-size: 14px;
 }
 
@@ -1051,6 +1030,8 @@ max-width: 179.72px;
 header {
     padding-bottom: 5px;
     max-height: 50px;
+    top: 0;
+    position: sticky;
 }
 
 .are h1{
