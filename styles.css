@@ -7,8 +7,25 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('Poppins-Regular.woff2') format('woff2');
+    src: url('fonts/Poppins-Regular.woff2') format('woff2');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-medium';
+    src: url('fonts/Poppins-Medium.woff2') format('woff2'),
+        url('Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url('fonts/Poppins-Bold.woff2') format('woff2');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -22,6 +39,10 @@ display: flex;
   max-height: 700px;
 }
 
+nav a{
+    font-family: 'Poppins-medium';
+}
+
 body{
     background-color: #F7F8F9;
 }
@@ -30,6 +51,14 @@ h1 {
     font-weight: 700;
     font-size: 48px;
     color: #333333;
+}
+
+h1, h2, h3{
+    font-family: 'Poppins-bold';
+}
+
+h4 {
+    font-family: 'Poppins-medium';
 }
 
 nav li{
@@ -116,12 +145,15 @@ nav a{
     border-radius: 10px;
     margin-left: 30px;
     max-height: 56px;
+    align-items: center;
+    display: flex;
  }
 
  .view a{
     color: #415123;
     font-weight: 600;
     font-size: 16px;
+    align-items: center;
 
  }
 
@@ -222,7 +254,7 @@ nav a{
 .img-product{
     background-color: #f2f2f2;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     padding: 23px 27px;
     margin-top: 12px;
 }
@@ -248,10 +280,28 @@ line-height: 100%;
 letter-spacing: 0%;
 }
 
+.konten-product {
+    display: flex;
+}
+
+.konten-product-right {
+    display: flex;
+    margin-left: 13%;
+    /* justify-content:center; */
+}
+
+p.capsule {
+    margin-top: 15px;
+}
+
 .price{
-    margin-left: 77%;
+    margin-right: 0;
     font-weight: 600;
     font-size: 24px;
+    /* justify-content: center; */
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
 }
  .capsule{
         font-size: 14px;
@@ -266,9 +316,9 @@ letter-spacing: 0%;
  .add{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 7px;
     border: 1px solid #415223;
-    padding: 18px;
+    padding: 15px;
     background-color: #415223;
     border-radius: 10px;
     margin-bottom: 9px;
@@ -326,6 +376,9 @@ letter-spacing: 0%;
     z-index: 1;
 }
 
+.are-left-content .are-right-content{
+    padding: 0px 0px;
+}
 
 .are-left *, .are-right * {
     position: relative;
@@ -356,12 +409,14 @@ letter-spacing: 0%;
     display: inline-block;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 17px 36px;
+    padding: 14px 36px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+    max-height: 56px;
     transition: background-color 0.3s, color 0.3s; 
+    max-height: 56px;
 }
 
 .are-btn:hover {
@@ -516,13 +571,18 @@ letter-spacing: 0%;
     font-weight: 400;
 }
 
+.quote-mobile{
+    display: none;
+}
 
 .subscribe {
-    background-image: linear-gradient(rgba(65, 81, 35, 0.86), rgba(65, 81, 35, 0.86)), url('img/footer-img.png');
-    
+    background-image: linear-gradient(rgba(65, 81, 35, 0.86), rgba(65, 81, 35, 0.86)), url(img/footer-img.png);
     background-position: center;
+    background-repeat: no-repeat;
+    /* Urutan: [ukuran linear-gradient], [ukuran gambar] */
+    background-size: 100% 100%, contain; 
     text-align: center;
-    padding: 93px 20px;
+    padding: 75px 20px;
     color: white;
     max-height: 332px;
 }
@@ -607,6 +667,7 @@ img.logo-footer {
     display: flex;
     flex-direction: column;
     gap: 22px;
+    align-items: baseline;
     flex: 1;
 }
 
@@ -628,6 +689,16 @@ img.logo-footer {
     font-size: 13px;
     text-decoration: none;
     line-height: 1.6;
+}
+
+.footer-col p{
+    color: #FFFFFF;
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
 .footer-col a:hover {
@@ -666,6 +737,17 @@ img.logo-footer {
 }
 
 
+.legal {
+    color: #FFFFFF;
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.legal-mobile{
+    display: none;
+}
+
 .copyright {
     text-align: center;
     border-top: 1px solid #69803E;
@@ -698,7 +780,8 @@ img.logo-footer {
 
 .mobile-menu.active {
   opacity: 1;
-  pointer-events: auto;  
+    pointer-events: auto;
+    padding: 28px 24px;
 }
 
 
@@ -713,17 +796,30 @@ img.logo-footer {
 
 .mobile-nav-links {
   clear: both;
-  margin-top: 60px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .mobile-nav-links a {
-  text-decoration: none;
-  color: #415223;
-  font-size: 18px;
-  font-weight: 500;
+text-decoration: none;
+    color: #415223;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Poppins-medium';
+}
+
+img.Logo-nav {
+    width: 75px;
+    height: 26px;
+}
+
+.logo-mobile{
+    display: block;
+    position: absolute;
+    top: 44px
 }
 
 @media (max-width: 768px) {
@@ -743,16 +839,26 @@ img.logo-footer {
 
    .opening{
       background-image: url(img/image.png);
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: center;
-      padding-right: 50px;
-      padding-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        padding: 80px 0px;
+        min-height: 727px;
+   }
+
+   .opening p{
+    font-size: 12px;
+    margin-bottom: 15px;
+   }
+
+   .keterangan-mobile, .brs-1{
+    margin-bottom: 3px;
    }
 
    .opening h1{
       font-size: 25px;
+      font-family: 'Poppins-bold';
    }
 
    .keterangan {
@@ -805,13 +911,15 @@ img.logo-footer {
  .katalog {
    display: flex;
    flex-direction: column;
-
+   margin-bottom: 65px;
  }
 
  
 
  .h-katalog h2{
-   font-size: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Poppins-bold';
  }
 
  .katalog-dekstop-p{
@@ -824,6 +932,8 @@ display: flex;
 text-align: center; 
 margin-right: 5px;
 color: #68803d;
+        font-size: 13px;
+        font-weight: 400;
     }
 
 #products {
@@ -832,51 +942,81 @@ color: #68803d;
 }
 
 .product1 {
-    max-width: 260px ;
-    width: 100%;
-    height: 100%;
-    max-height: 400px ;
+    max-width: 238.96px;
+        width: 100%;
+        height: 100%;
+        max-height: 323.8px;
+                padding: 0px 13px;
+                box-shadow: 0px 0px 15px 0px #3333331A;
 
 }
 
 .product2 {
-    max-width: 260px ;
-    width: 100%;
-    height: 100%;
-    max-height: 400px ;
+    max-width: 238.96px;
+        width: 100%;
+        height: 100%;
+        max-height: 323.8px;
+                padding: 0px 13px;
+                box-shadow: 0px 0px 15px 0px #3333331A;
 
 }
 
 .product3 {
-    max-width: 260px ;
-    width: 100%;
-    height: 100%;
-    max-height: 400px ;
+    max-width: 238.96px;
+        width: 100%;
+        height: 100%;
+        max-height: 323.8px;
+                padding: 0px 13px;
+                box-shadow: 0px 0px 15px 0px #3333331A;
+
 }
 
 #products img {
-    max-width: 230px;
-    max-height: 220px;
+max-width: 179.72px;
+        max-height: 179.72px;
     width: 100%;
     height: 100%;
 }
 
+.img-product{
+    padding: 6px 16px;
+    margin-bottom: 23px;
+}
+
 .add {
-    padding: 7px 0;
-    margin-bottom: 10px;
+    padding: 9px 0;
+        margin-bottom: 17px;
+        max-height: 34.85px;
+}
+
+.add a{
+    font-size: 11px;
 }
 
 #products h5{
-    margin: 0;
-    font-size: 15px;
+   margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+}
+
+.konten-product {
+    display: flex;
+}
+
+.konten-product-right {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
 }
 
 .price {
-    margin-left: 170px;
+    margin-left: 35%;
+    font-size: 14px;
 }
 
 .capsule {
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 8px;
 }
 
 .are-pic{
@@ -884,13 +1024,28 @@ color: #68803d;
     flex-direction: column;
 }
 
-.are-left h3{
-    font-size: 23px;
+.are-left h3, .are-right h3{
+    font-size: 20px;
+}
+
+.are{
+    max-height: 550px ;
+}
+
+.are-left, .are-right{
+    max-height: 208px;
+    padding: 40px 24px;
 }
 
 .are-left .are-btn {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 3px 20px;
+        max-height: 25.53px;
+}
+
+.are-left p, .are-right p {
+    font-size: 11px;
+    font-weight: 400;
+    margin-bottom: 25px;
 }
 
 header {
@@ -898,32 +1053,235 @@ header {
     max-height: 50px;
 }
 
+.are h1{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Poppins-bold';
+}
+
+a.are-btn {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.are-left-content, .are-right-content {
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+a.are-btn {
+    font-size: 11px;
+}
 
 .are-right .are-btn {
-    padding: 3px 30px;
+    padding: 3px 20px;
+        max-height: 25.53px;
+}
+
+
+.why h2 {
+    font-size: 28px;
+    font-family: 'Poppins-bold';
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .why .why-cards {
     flex-direction: column;
 }
 
+.why-sub{
+    padding-right: 22px;
+    padding-left: 22px;
+    font-size: 12px;
+}
+
+.why .why-card{
+        box-shadow: 10px 32px 72px 0px #33333308;
+        padding: 21px 52px;
+}
+
+.why-icon img {
+    width: 26.85px;
+    height: 26.85px;
+}
+
+.why .why-icon{
+    width: 60.39px;
+    height: 60.39px;
+}
+
+.why-card h4{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins-medium';
+}
+
+.why-card p{
+    font-size: 12px;
+}
+
+.testi {
+    margin-top: 10px;
+}
+
+.testi h2 {
+    font-size: 28px;
+    font-family: 'Poppins-bold';
+}
+
+.testi p{
+    font-size: 12px;
+}
+
+.stars{
+    font-size: 14px;
+}
+
+.testi-card{
+padding: 30px 26px;
+        max-height: 257px;
+        min-height: 256px;
+}
+
+.testi-avatar{
+    width: 40.28px;
+    height: 40.28px;
+}
+
+.testi-profil{
+    margin-bottom: 0px;
+    margin-top: 26px;
+}
+
+.testi-nama span{
+    font-size: 10px;
+}
+
+.testi-nama strong{
+    font-size: 12px;
+}
+
+.quote{
+    display: none;
+}
+
+.quote-mobile{
+    display: block;
+}
+
+.subscribe h2 {
+    font-family: 'Poppins-bold';
+    font-size: 28px;
+    font-weight: 700;
+    padding: 10px 47px;
+}
+
+.subscribe p{
+    font-size: 12px;
+    font-weight: 400;
+    padding: 1px 30px;
+}
+
+.subscribe-box input{
+    font-size: 9px;
+}
+
+.subscribe-box img {
+    width: 13px;
+    height: 12px;
+}
+
 .subscribe .subscribe-box {
-    padding: 4px 4px;
+    padding: 1px 9px;
 }
 
 .subscribe {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) url(img/footer-img.png);
-}
+background-image: linear-gradient(rgba(65, 81, 35, 0.86), rgba(65, 81, 35, 0.86)), url(img/subscribe-mobile.png);
+        padding: 72px 26px;
+        min-height: 402px;
+        align-items: center;}
 
 .subscribe-box button {
-    margin-right: px;
-    font-size: 10px;
+font-size: 9px;
+        padding: 6px 17px;
+        border-radius: 5px;
+}
+
+footer{
+max-height: 799px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 28px;
+    height: 100%;
+}
+
+.logo-footer{
+    margin-right: auto ;
+    margin-left: auto;
+    width: 84px;
+    height: 29px;
+}
+
+.footer-col p{
+    font-size: 12px;
+        font-weight: 400;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        line-height: 2.6;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.legal-mobile{
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+}
+
+.legal{
+    display: none;
+}
+
+.footer-col a{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer-col .logo-contact{
+    width: 16px;
+    height: 16px;
+margin-bottom: auto;
 }
 
 footer .footer-container {
     text-align: center;
     align-items: center;
     flex-direction: column;
+}
+
+.footer-col {
+    gap: 10px;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 11px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.social-icons {
+align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 6px;
 }
 
 .shop a {
@@ -947,6 +1305,8 @@ footer .footer-container {
 .hamburger-btn {
     display: block; 
     text-decoration: none;
+    background: none;
+    border: none;
   }
 
 }
