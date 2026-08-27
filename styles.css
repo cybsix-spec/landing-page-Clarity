@@ -39,6 +39,7 @@ display: flex;
   max-height: 700px;
   position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 nav a{
@@ -125,10 +126,12 @@ nav a{
  .shop{
     border: 1px solid #415123;
     align-items: flex-start;
-    padding: 17px 33px;
+    padding: 17px 31px;
     border-radius: 10px;
     background-color: #415123;
     display: flex;
+    max-height: 56px;
+    max-width: 145px;
  }
 
  .opening-btn a{
@@ -143,12 +146,13 @@ nav a{
 
  .view {
     border: 1px solid #415123;
-    padding: 20px 30px;
+    padding: 20px 22px;
     border-radius: 10px;
     margin-left: 30px;
     max-height: 56px;
     align-items: center;
     display: flex;
+    max-width: 152px;
  }
 
  .view a{
@@ -388,7 +392,7 @@ p.capsule {
     display: inline-block;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 14px 36px;
+    padding: 14px 45px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -623,8 +627,8 @@ p.capsule {
 footer {
     background-color: #415123;
     color: white;
-    padding: 55px 40px 38px;
-    max-height: 350px;
+    padding: 61px 40px 38px;
+   
 }
 
 img.logo-footer {
@@ -637,8 +641,48 @@ img.logo-footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1100px;
-    margin: 18px auto;
+    width: 100%;
+    gap: 40px;
+}
+
+.brand-col p {
+    line-height: 2.2;
+}
+
+.contact-col {
+    justify-content: flex-start;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    padding-top: 21px;
+
+}
+
+.contact-col-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-col.footer-col-left {
+    align-items: flex-end;
+    padding-right: 51px;
+}
+
+
+.footer-col-left-a {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.footer-half {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
     gap: 40px;
 }
 
@@ -801,7 +845,7 @@ img.Logo-nav {
     top: 44px
 }
 
-@media (max-width: 768px) {
+@media (max-width: 426px) {
    .nav-links{
       display: none;
    }
@@ -1220,6 +1264,31 @@ max-height: 799px;
     font-weight: 500;
 }
 
+.footer-half{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-col{
+    text-align: center;
+}
+
+.footer-col.footer-col-left{
+    padding: 0;
+        text-align: center;
+        display: contents;
+}
+
+.footer-col.contact-col{
+    padding: 0;
+}
+
+.contact-col-content{
+            display: flex;
+        align-items: center;
+        gap: 5px;
+}
+
 .legal-mobile{
     font-size: 12px;
     font-weight: 400;
@@ -1236,9 +1305,10 @@ max-height: 799px;
 }
 
 .footer-col .logo-contact{
-    width: 16px;
-    height: 16px;
-margin-bottom: auto;
+width: 16px;
+        height: 16px;
+        margin-bottom: auto;
+        margin: auto;
 }
 
 footer .footer-container {
@@ -1289,5 +1359,162 @@ align-items: center;
     background: none;
     border: none;
   }
+
+}
+
+ @media (min-width: 426px) and (max-width: 768px) { 
+
+     nav a {
+    font-size: 16px;
+}
+
+img.Logo {
+    width: 100px;
+}
+
+header {
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+section.opening {
+    justify-content: normal;
+    height: 575px;
+    padding-top: 63px;
+}
+
+.shop a {
+    font-size: 15px;
+}
+
+.view a {
+    font-size: 15px;
+}
+
+.shop, .view {
+    padding: 13px 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.opening p {
+    font-size: 13px;
+}
+
+.opening p {
+    font-size: 13px;
+}
+
+#products {
+    flex-direction: column;
+}
+
+.are-pic {
+    flex-direction: column;
+    height: 638px;
+}
+
+.are-left h3, .are-right h3 {
+    font-size: 30px;
+}
+
+.are-left p, .are-right p {
+    font-size: 13px;
+}
+
+.are-btn {
+    font-size: 15px;
+    padding: 10px 25px;
+}
+
+.why-cards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-card {
+    padding: 45px 25px;
+    max-width: 429px;
+    width: 100%;
+}
+
+.quote {
+    font-size: 16px;
+}
+
+section.testi {
+    padding-right: 53px;
+    padding-left: 53px;
+}
+
+.subscribe h2 {
+    font-size: 33px;
+}
+
+.subscribe p {
+    font-size: 13px;
+}
+
+.subscribe-box button {padding: 9px 20px;font-size: 13px;}
+
+.subscribe-box {
+    padding: 8px 7px;
+}
+
+.footer-container {
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-half {gap: 20px;flex-direction: column;}
+
+
+
+.footer-col.footer-col-left {
+    align-items: center;
+    padding: 0;
+}
+
+.footer-col.brand-col {
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+height: 100%;
+}
+
+.footer-col {
+    align-items: center;
+    margin-top: 15px;
+}
+
+.footer-col.contact-col {
+    align-items: center;
+}
+
+.contact-col-content {
+    align-items: center;
+}
+
+a.legal {
+    display: none;
+}
+
+a.legal-mobile {
+    display: block;
+}
+
+.footer-col-left-a {
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-col.footer-col-left {
+    margin-bottom: 15px;
+}
 
 }
