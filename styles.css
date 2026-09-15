@@ -5,6 +5,11 @@
     font-family: Poppins, sans-serif;
 }
 
+html, body, main {
+    height: 100%;
+    margin: 0;
+}
+
 @font-face {
     font-family: 'Poppins';
     src: url('fonts/Poppins-Regular.woff2') format('woff2');
@@ -87,16 +92,26 @@ nav a{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 650px;
+    max-height: 720px;
+    height: 100%;
     text-align: left;
     align-items: flex-start;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 50px;
+    /*padding-left: 50px; */
     padding-bottom: 150px;
     padding-top: 10px;
 }
+
+.opening p {
+    font-size: 14.5px;
+}
+
+.shop {
+    padding: 14px 31px;
+}
+
 
 .opening p{
     color: #69803E;
@@ -118,15 +133,14 @@ nav a{
     font-weight: bolder;
  }
 
- .opening-btn{
+ .opening-btn {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
  }
  .shop{
     border: 1px solid #415123;
     align-items: flex-start;
-    padding: 17px 31px;
     border-radius: 10px;
     background-color: #415123;
     display: flex;
@@ -305,11 +319,16 @@ p.capsule {
     background-color: #415223;
     border-radius: 10px;
     margin-bottom: 9px;
+    transition: background-color 0.3s, color 0.3s; 
  }
 
  .add a{
     color: rgb(236, 235, 235);
     text-decoration: none;
+ }
+
+ .add:hover{
+    background-color: #546831;;
  }
 
  .are {
@@ -409,7 +428,7 @@ p.capsule {
 
 .why {
     text-align: center;
-    padding: 80px 20px 40px;
+    padding: 80px 0px 40px;
 }
 
 .why h2 {
@@ -429,9 +448,9 @@ p.capsule {
 
 .why-cards {
     display: flex;
-    
+    justify-content: space-between;
     gap: 25px;
-    max-width: 1100px;
+   /* max-width: 1100px; */
     margin: 0 auto;
 }
 
@@ -443,7 +462,8 @@ p.capsule {
     box-shadow: 10px 32px 72px 0px #33333308;
     display: flex;
     flex-direction: column;
-    align-items: center;;
+    align-items: center;
+    max-width: 495px;
 }
 
 .why-icon {
@@ -566,8 +586,8 @@ section.shoping {
 }
 
 .container {
-    width: 100%;
-    max-width: 1228px;
+    width: 96%;
+    max-width: 1677px;
     padding: 0 24px;
     margin: 0 auto;
 }
@@ -722,7 +742,8 @@ section.subscribe {
 footer {
     background-color: #415123;
     color: white;
-    padding: 61px 40px 38px;
+    padding: 108px 85px 38px;
+    height: 410px;
    
 }
 
@@ -753,6 +774,10 @@ img.logo-footer {
 
 }
 
+.footer-col.contact-col {
+    align-items: center;
+}
+
 .contact-col-content {
     display: flex;
     flex-direction: column;
@@ -763,8 +788,7 @@ img.logo-footer {
 }
 
 .footer-col.footer-col-left {
-    align-items: flex-end;
-    padding-right: 51px;
+    align-items: center;
 }
 
 
