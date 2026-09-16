@@ -10,6 +10,7 @@ html, body, main {
     margin: 0;
 }
 
+
 @font-face {
     font-family: 'Poppins';
     src: url('fonts/Poppins-Regular.woff2') format('woff2');
@@ -99,9 +100,10 @@ nav a{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /*padding-left: 50px; */
+    /* padding-left: 50px; */
     padding-bottom: 150px;
     padding-top: 10px;
+    min-height: 80vh;
 }
 
 .opening p {
@@ -146,6 +148,7 @@ nav a{
     display: flex;
     max-height: 56px;
     max-width: 145px;
+    transition: background-color 0.3s,  border 0.3s;
  }
 
  .opening-btn a{
@@ -158,6 +161,10 @@ nav a{
     font-size: 16px;
  }
 
+ .shop:hover{
+    background-color: #4f632b;
+ }
+
  .view {
     border: 1px solid #415123;
     padding: 20px 22px;
@@ -167,15 +174,21 @@ nav a{
     align-items: center;
     display: flex;
     max-width: 152px;
+     transition: background-color 0.3s,  border 0.3s;
  }
 
  .view a{
     color: #415123;
     font-weight: 600;
     font-size: 16px;
-    align-items: center;
-
+  
  }
+
+.view:hover{
+    background-color: #f8faf365;
+    color: white;  
+}
+
 
  .hero {
     background-color: #f7f9fa;
@@ -225,7 +238,7 @@ nav a{
 
 
 
-.product1, .product2, .product3 {
+.product {
     border: 1px solid white;
     align-items: flex-start;
     padding: 20px 22px;
@@ -233,14 +246,15 @@ nav a{
     border-radius: 10px;
     box-shadow: 10px 32px 72px 0px #33333308;
     margin-top: 16px;
-    max-width: 380px;
-    max-height: 514.58px;
-    height: auto;
+    max-width: 506px;
+    max-height: 603.58px;
+    height: 100%;
+    width: 100%;
 }
     
 .img-product img {
-    max-width: 281.81px;
-    max-height: 285.81px;
+    max-width: 362.81px;
+    max-height: 362.81px;
     width: 100%;
     height: 100%;
     margin-top: -21px;
@@ -253,28 +267,19 @@ nav a{
     margin-bottom: 23px;
     padding: 23px 27px;
     margin-top: 12px;
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
 }
 
-.product1 h5{
+.product{
 font-weight: 600;
 font-size: 18px;
 line-height: 100%;
 letter-spacing: 0%;
 }
 
-.product2 h5{
-font-weight: 600;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0%;
-}
 
-.product3 h5{
-font-weight: 600;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0%;
-}
 
 .konten-product {
     display: flex;
@@ -585,9 +590,13 @@ section.shoping {
     gap: 20px;
 }
 
+h5 {
+    font-size: 16px;
+}
+
 .container {
-    width: 96%;
-    max-width: 1677px;
+    width: 100%;
+    max-width: 1787px;
     padding: 0 24px;
     margin: 0 auto;
 }
@@ -824,6 +833,10 @@ img.logo-footer {
     font-size: 16px;
     margin-bottom: 10px;
     color: #CBD8B4;
+}
+
+.footer-half.footer-left {
+    padding-left: 5%;
 }
 
 .footer-col p, .footer-col a {
@@ -1083,7 +1096,7 @@ color: #68803d;
     flex-direction: column;
 }
 
-.product1 {
+.product {
     max-width: 238.96px;
         width: 100%;
         height: 100%;
@@ -1093,25 +1106,7 @@ color: #68803d;
 
 }
 
-.product2 {
-    max-width: 238.96px;
-        width: 100%;
-        height: 100%;
-        max-height: 323.8px;
-                padding: 0px 13px;
-                box-shadow: 0px 0px 15px 0px #3333331A;
 
-}
-
-.product3 {
-    max-width: 238.96px;
-        width: 100%;
-        height: 100%;
-        max-height: 323.8px;
-                padding: 0px 13px;
-                box-shadow: 0px 0px 15px 0px #3333331A;
-
-}
 
 #products img {
 max-width: 179.72px;
@@ -1603,7 +1598,12 @@ section.testi {
 }
 
 footer {
-height: 100%;
+height: auto;
+}
+
+.product{
+    max-width: 400px;
+    max-height: 508px;
 }
 
 .footer-col {
