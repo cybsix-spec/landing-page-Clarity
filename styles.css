@@ -46,13 +46,13 @@ main {
 }
 
 header {
-display: flex;
-  justify-content: space-between;  
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #ffffff;
-  max-height: 700px;
-  position: sticky;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 20px 0px;
+    background-color: #ffffff;
+    max-height: 700px;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -95,6 +95,17 @@ nav a{
 
 .nav-links {
     display: flex;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.Logo {
+    width: 100%;
+    max-width: 120px;
 }
 
 .opening {
@@ -997,6 +1008,9 @@ img.Logo-nav {
     max-width: 75px;
     margin-bottom: 4px;
 }
+button img {
+    margin-right: 26px;
+}
 
    .opening{
       background-image: url(img/image.png);
@@ -1499,9 +1513,7 @@ align-items: center;
     font-size: 16px;
 }
 
-img.Logo {
-    width: 100px;
-}
+
 
 header {
     padding-bottom: 10px;
