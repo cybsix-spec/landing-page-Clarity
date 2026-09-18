@@ -770,7 +770,7 @@ section.subscribe {
 footer {
     background-color: #415123;
     color: white;
-    padding: 108px 85px 38px;
+    padding: 108px 0px 38px;
     height: 410px;
    
 }
@@ -855,7 +855,7 @@ img.logo-footer {
 }
 
 .footer-half.footer-left {
-    padding-left: 5%;
+    padding-left: 2%;
 }
 
 .footer-col p, .footer-col a {
